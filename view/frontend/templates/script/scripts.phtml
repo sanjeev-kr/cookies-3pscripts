@@ -1,0 +1,82 @@
+<?php
+/**
+ * Copyright 2023 Sanjeev Kumar
+ * NOTICE OF LICENSE
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * @category  Sanjeev
+ * @package   Sanjeev_Cookies3Pscripts
+ * @copyright Copyright (c) 2023
+ * @license   http://www.apache.org/licenses/LICENSE-2.0
+ */
+
+$helper = $this->helper("Sanjeev\Cookies3Pscripts\Helper\Config");
+
+$cbid = $helper->getCookiebotCode();
+
+if($helper->isCookiebotEnabled() && !empty($cbid) )
+{
+    ?>
+    <script type='text/javascript'>
+        require([
+        'https://consent.cookiebot.com/uc.js?cbid=<?=$cbid?>',
+        'https://consent.cookiebot.com/<?=$cbid?>/cd.js',
+        'domReady!'
+        ], function () {
+        'use strict';
+        });
+    </script>
+    <?php
+}
+
+$cyCode = $helper->getCookieYesCode();
+
+if($helper->isCookieYesEnabled() && !empty($cyCode) )
+{
+    ?>
+    <script type='text/javascript'>
+        require([
+        'domReady!'
+        ], function () {
+        'use strict';
+        var head = document.getElementsByTagName('head')[0];
+        var script = document.createElement('script');
+        script.type = 'text/javascript';
+        script.id = 'cookieyes';
+        script.src = 'https://cdn-cookieyes.com/client_data/<?=$cyCode?>/script.js';
+        head.appendChild(script);
+        });
+    </script>
+    <?php
+}
+
+$cfCode = $helper->getCookieFirstCode();
+
+if($helper->isCookieFirstEnabled() && !empty($cfCode) )
+{
+    ?>
+    <script type='text/javascript'>
+        require([
+        'domReady!'
+        ], function () {
+        'use strict';
+        var head = document.getElementsByTagName('head')[0];
+        var script = document.createElement('script');
+        script.type = 'text/javascript';
+        script.src = 'https://consent.cookiefirst.com/sites/<?=$cfCode?>/consent.js';
+        head.appendChild(script);
+        });
+    </script>
+    <?php
+}

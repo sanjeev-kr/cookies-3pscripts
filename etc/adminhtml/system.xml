@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright 2023 Sanjeev Kumar
+ * NOTICE OF LICENSE
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * @category  Sanjeev
+ * @package   Sanjeev_Cookies3Pscripts
+ * @copyright Copyright (c) 2023
+ * @license   http://www.apache.org/licenses/LICENSE-2.0
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="web" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+            <resource>Sanjeev_Cookies3Pscripts::cookies_3pscripts_config</resource>
+            <group id="3pscripts" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>3rd Parties Cookies Consent Scripts</label>
+                <field id="cookiebot_active" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Enabled Cookie Bot</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="cookiebot_cbid" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Cookie bot Id</label>
+                    <depends>
+                        <field id="cookiebot_active">1</field>
+                    </depends>
+                </field>
+
+                <field id="cookieyes_active" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Enabled Cookie Yes</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="cookieyes_code" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Cookie Yes Code</label>
+                    <depends>
+                        <field id="cookieyes_active">1</field>
+                    </depends>
+                </field>
+
+               <field id="cookiefirst_active" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Enabled Cookie First</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="cookiefirst_code" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Cookie First Code</label>
+                    <depends>
+                        <field id="cookiefirst_code">1</field>
+                    </depends>
+                </field>
+
+            </group>
+        </section>
+    </system>
+</config>
