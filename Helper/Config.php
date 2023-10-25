@@ -25,7 +25,7 @@ namespace Sanjeev\Cookies3Pscripts\Helper;
 
 use Magento\Store\Model\ScopeInterface;
 
-class Config
+class Config extends \Magento\Framework\App\Helper\AbstractHelper
 {
     const XML_COOKIE_BOT_CODE = 'web/3pscripts/cookiebot_cbid';
 
@@ -38,21 +38,6 @@ class Config
     const XML_COOKIE_FIRST_CODE = 'web/3pscripts/cookiefirst_code';
 
     const XML_COOKIE_FIRST_ENABLE = 'web/3pscripts/cookiefirst_active';
-
-    /**
-     * @var \Magento\Framework\App\Config\ScopeConfigInterface
-     */
-    protected $scopeConfig;
-
-    /**
-     * @param \Magento\Framework\App\Config\ScopeConfigInterface $scopeConfig
-     */
-    public function __construct(
-        \Magento\Framework\App\Config\ScopeConfigInterface $scopeConfig
-
-    ) {
-        $this->scopeConfig = $scopeConfig;
-    }
 
     /**
      * @return bool
