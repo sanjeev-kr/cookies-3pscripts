@@ -28,33 +28,33 @@
             <resource>Sanjeev_Cookies3Pscripts::cookies_3pscripts_config</resource>
             <group id="3pscripts" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
                 <label>3rd Parties Cookies Consent Scripts</label>
-                <field id="cookiebot_active" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="0">
+                <field id="cookiebot_active" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Enabled Cookie Bot</label>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                 </field>
-                <field id="cookiebot_cbid" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <field id="cookiebot_cbid" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Cookie bot Id</label>
                     <depends>
                         <field id="cookiebot_active">1</field>
                     </depends>
                 </field>
 
-                <field id="cookieyes_active" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="0">
+                <field id="cookieyes_active" translate="label" type="select" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Enabled Cookie Yes</label>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                 </field>
-                <field id="cookieyes_code" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                <field id="cookieyes_code" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Cookie Yes Code</label>
                     <depends>
                         <field id="cookieyes_active">1</field>
                     </depends>
                 </field>
 
-               <field id="cookiefirst_active" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="0">
+               <field id="cookiefirst_active" translate="label" type="select" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Enabled Cookie First</label>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                 </field>
-                <field id="cookiefirst_code" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                <field id="cookiefirst_code" translate="label" type="text" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Cookie First Code</label>
                     <depends>
                         <field id="cookiefirst_code">1</field>
