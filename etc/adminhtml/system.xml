@@ -57,7 +57,7 @@
                 <field id="cookiefirst_code" translate="label" type="text" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Cookie First Code</label>
                     <depends>
-                        <field id="cookiefirst_code">1</field>
+                        <field id="cookiefirst_active">1</field>
                     </depends>
                 </field>
 
