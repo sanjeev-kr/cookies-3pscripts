@@ -38,7 +38,6 @@ if($helper->isCookiebotEnabled() && !empty($cbid) )
         script.type = 'text/javascript';
         script.id = 'Cookiebot';
         script.setAttribute('data-cbid', "<?=$cbid?>");
-        script.setAttribute('data-blockingmode',"auto");
         script.src = 'https://consent.cookiebot.com/uc.js';
         head.appendChild(script);
         });
