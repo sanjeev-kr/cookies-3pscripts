@@ -27,11 +27,32 @@
         <policy id="frame-src">
             <values>
                 <value id="consent.cookiebot.com" type="host">consent.cookiebot.com</value>
+                 <value id="consentcdn.cookiebot.com" type="host">consentcdn.cookiebot.com</value>
             </values>
         </policy>
         <policy id="script-src">
             <values>
                 <value id="consent.cookiebot.com" type="host">consent.cookiebot.com</value>
+                <value id="consent.cookiefirst.com" type="host">consent.cookiefirst.com</value>
+                 <value id="cdn-cookieyes.com" type="host">cdn-cookieyes.com</value>
+            </values>
+        </policy>
+        <policy id="connect-src">
+            <values>
+                <value id="consent.cookiefirst.com" type="host">consent.cookiefirst.com</value>
+                <value id="edge.cookiefirst.com" type="host">edge.cookiefirst.com</value>
+                <value id="log.cookieyes.com" type="host">log.cookieyes.com</value>
+                 <value id="cdn-cookieyes.com" type="host">cdn-cookieyes.com</value>
+            </values>
+        </policy>
+        <policy id="style-src">
+            <values>
+               <value id="consent.cookiefirst.com" type="host">consent.cookiefirst.com</value>
+            </values>
+        </policy>
+        <policy id="img-src">
+            <values>
+             <value id="cdn-cookieyes.com" type="host">cdn-cookieyes.com</value>
             </values>
         </policy>
     </policies>
